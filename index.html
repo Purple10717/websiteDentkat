@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="pictures/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pictures/favicon-16x16.png">
+    <link rel="manifest" href="pictures/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTKAT, s.r.o. - stomatologická ambulancia Galanta</title>
+    <meta name="description" content="Zubná ambulancia Vám ponúka komplexné stomatologické služby: konzervatívna stomatológia, endodoncia, estetická stomatológia, protetika. Najdete nás v Galante a Dolných Salibách">
+    <meta name="language" content="slovak">
+    <meta name="keywords" content="zubár galanta stomatologická klinika Dolné Saliby Dentkat zubná ambulancia stomatológ Stavrovska Zalužická">
+    <meta name="author" content="zubná ambulancia DENTKAT, s.r.o.">
+    <meta name="copyright" content="Copyright DENTKAT, s.r.o.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="scroll-anim">
+        <a class="logo" href="#domov">DENTKAT</a>
+
+        <div class="desktop-menu">
+            <a href="#domov">Domov</a>
+            <a href="#">Sluzby</a>  
+            <a href="#">Cennik</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-bg"></div>
+        <div class="menu-list">
+            <p class="close">
+                +
+            </p>
+            <a class="margin" href="#domov">Domov</a>
+            <a href="#">Sluzby</a>
+            <a href="#">Cennik</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+    <script>
+        const menubtn = document.querySelector('.menu')
+        const menulist = document.querySelector('.menu-list')
+        const menuclose = document.querySelector('.close')
+        const menubg = document.querySelector('.menu-bg')
+
+        const menu = document.getElementById('scroll-anim')
+
+        menubtn.addEventListener('click', () => {
+            menulist.style.display = 'block';
+            menubg.style.display = 'block';
+        })
+        menuclose.addEventListener('click', () => {
+            menulist.style.display = 'none';
+            menubg.style.display = 'none';
+        })
+        menubg.addEventListener('click', () => {
+            menulist.style.display = 'none';
+            menubg.style.display = 'none';
+        })
+
+        window.addEventListener('scroll', ()=>{
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                menu.style.padding = 0;
+            }
+            else{
+                menu.style.padding = '2vh 0';
+            }
+        })
+    </script>
+</body>
+</html>
